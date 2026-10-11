@@ -73,15 +73,8 @@ Only list the database engine you actually used in the final project.
 The CSV file is loaded into a Pandas DataFrame.
 
 ```python
-import pandas as pd
-import numpy as np
 
 df = pd.read_csv("customer_shopping_behavior.csv")
-
-print(df.head())
-print(df.shape)
-print(df.info())
-```
 
 ### 2. Explore the Data
 
@@ -93,8 +86,6 @@ Useful checks include:
 print(df.shape)
 print(df.info())
 print(df.isnull().sum())
-print(df.duplicated().sum())
-print(df.describe(include="all"))
 ```
 
 ### 3. Clean and Prepare the Data
@@ -108,8 +99,6 @@ The current Python script performs these transformations:
 - Creates an `age_group` feature from `age`.
 - Maps `frequency_of_purchases` to an estimated number of days between purchases.
 - Drops the `promo_code_used` column.
-
-**Important:** Dropping `promo_code_used` removes that field from later analysis. Keep it if you want to investigate promotional-code usage. Also verify that the frequency labels and their mapped day values match the meaning of the source dataset.
 
 ### 4. Create Age Groups
 
@@ -191,94 +180,11 @@ The dashboard is intended to communicate customer behaviour and purchase pattern
 
 ### Add a Dashboard Screenshot
 
-Save a screenshot of the finished dashboard as `images/dashboard.png`, then display it here:
+Save a screenshot of the finished dashboard as `<img width="2234" height="1253" alt="image" src="https://github.com/user-attachments/assets/ec238dac-30ba-4efb-a1bb-8821c01403ae" />`, then display it here:
 
 ```markdown
-![Customer Shopping Behaviour Power BI Dashboard](images/dashboard.png)
+![Customer Shopping Behaviour Power BI Dashboard](<img width="2234" height="1253" alt="image" src="https://github.com/user-attachments/assets/ec238dac-30ba-4efb-a1bb-8821c01403ae" />)
 ```
-
-Remove or update the image reference if your screenshot uses a different filename.
-
-## Project Structure
-
-```text
-Customer_Shopping_Behaviour/
-├── customer_shopping_behavior.csv
-├── main.py
-├── Customer_data_behavior SQL.sql
-├── Customer_behavior_Dashboard.pbix
-├── images/
-│   └── dashboard.png
-└── README.md
-```
-
-This structure reflects the files visible in the project workspace, with `images/dashboard.png` as an optional folder to create for the dashboard screenshot.
-
-## How to Run the Project
-
-### Prerequisites
-
-- Python installed
-- VS Code or another Python editor
-- Required Python packages
-- A configured SQL database if you want to run the database-loading and SQL-analysis steps
-- Power BI Desktop to open the dashboard
-
-### 1. Open the project folder
-
-Open `Customer_Shopping_Behaviour` in VS Code.
-
-### 2. Install dependencies
-
-The script uses Pandas, NumPy, SQLAlchemy, and Python's URL parsing utilities. Install the required packages:
-
-```bash
-python -m pip install pandas numpy sqlalchemy
-```
-
-Install the database-specific SQLAlchemy driver for your selected database if it is required. For example, PostgreSQL commonly uses `psycopg` or `psycopg2`, while MySQL commonly uses `PyMySQL`.
-
-### 3. Check the dataset path
-
-Keep `customer_shopping_behavior.csv` in the project directory, or update the path in `main.py`:
-
-```python
-df = pd.read_csv("customer_shopping_behavior.csv")
-```
-
-### 4. Configure the database connection
-
-Check the database connection code in `main.py`. Update the database URL, database name, username, and other settings for your local environment.
-
-**Security:** Do not commit passwords, access tokens, or other secrets to GitHub. Use environment variables or a local configuration file excluded through `.gitignore`.
-
-### 5. Run the Python script
-
-From the project directory, run:
-
-```bash
-python main.py
-```
-
-Review any printed output and confirm that the transformations complete successfully. If `main.py` writes data to a database, make sure the database service is running and its connection settings are correct.
-
-### 6. Run the SQL queries
-
-Open `Customer_data_behavior SQL.sql` in your SQL editor, select the correct database, and execute the queries. Verify that the table and column names match the cleaned dataset.
-
-### 7. Open the Power BI dashboard
-
-Open `Customer_behavior_Dashboard.pbix` in Power BI Desktop. Configure the data source if prompted, then refresh the report to load the latest data.
-
-## Results and Deliverables
-
-- [x] Dataset file included in the project workspace
-- [x] Python data-preparation script
-- [x] SQL analysis file
-- [x] Power BI dashboard file
-- [ ] Dashboard screenshot added to the README
-- [ ] Actual insights and recommendations documented
-- [ ] Dataset source and final schema documented
 
 ## Future Improvements
 

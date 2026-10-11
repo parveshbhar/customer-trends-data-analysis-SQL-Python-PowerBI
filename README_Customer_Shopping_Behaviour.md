@@ -199,16 +199,6 @@ Save a screenshot of the finished dashboard as `images/dashboard.png`, then disp
 
 Remove or update the image reference if your screenshot uses a different filename.
 
-## Key Insights
-
-Add verified findings from your SQL queries and Power BI dashboard here. Do not treat the following prompts as results until you have calculated them from the dataset.
-
-- **Purchase behaviour:** `[Summarize the main purchase-amount pattern.]`
-- **Age-group comparison:** `[Describe differences between age groups.]`
-- **Customer feedback:** `[Summarize the review-rating results.]`
-- **Shopping frequency:** `[Identify the most common purchase-frequency group.]`
-- **Business recommendation:** `[Suggest an action supported by your analysis.]`
-
 ## Project Structure
 
 ```text
@@ -305,6 +295,6 @@ This project combines Python, SQL, and Power BI to analyze customer shopping beh
 
 ## Author
 
-**Name:** `[Your Name]`  
-**GitHub:** `[Your GitHub profile or repository link]`  
+**Name:** `Parvesh`  
+**GitHub:** `https://github.com/parveshbhar/customer-trends-data-analysis-SQL-Python-PowerBI/edit/main/README_Customer_Shopping_Behaviour.md`  
 **Project:** Customer Shopping Behaviour Analysis
